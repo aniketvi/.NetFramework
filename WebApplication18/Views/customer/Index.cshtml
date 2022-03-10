@@ -1,0 +1,18 @@
+﻿@model IEnumerable<WebApplication18.Models.location>
+@{
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>Locations</th>
+        <th>Details</th>
+
+    </tr>
+    @foreach (var Location in Model)
+    {
+        <tr>
+            <td> <a asp-action="customerlist" asp-controller="customer" asp-route-id="@Location.Id"> @Location.place  </a> </td>
+            <td>@Location.details</td>
+        </tr>
+    }
+</table>
